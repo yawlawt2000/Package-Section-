@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Package Section</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #fff;
+        background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000);
+        background-size: 400% 400%;
+        animation: bgMove 12s ease infinite;
+    }
+
+    @keyframes bgMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .container {
+        max-width: 420px;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .apk-download {
+        background: linear-gradient(90deg, #00c6ff, #0072ff);
+        border-radius: 18px;
+        padding: 18px;
+        text-align: center;
+        margin-bottom: 22px;
+        box-shadow: 0 0 25px rgba(0,198,255,0.6);
+    }
+
+    .apk-download h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+    }
+
+    .apk-btn {
+        display: inline-block;
+        padding: 14px 26px;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #ff9800, #ff5722);
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .apk-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(255,87,34,0.8);
+    }
+
+    .package-card {
+        position: relative;
+        background: linear-gradient(180deg, rgba(40,40,80,0.9), rgba(15,15,40,0.9));
+        border: 2px solid #6a7cff;
+        border-radius: 16px;
+        padding: 16px;
+        margin-bottom: 18px;
+        box-shadow: 0 0 20px rgba(106,124,255,0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .package-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 0 35px rgba(106,124,255,0.6);
+    }
+
+    .hot-badge {
+        position: absolute;
+        top: -12px;
+        right: -8px;
+        background: linear-gradient(90deg, #ff416c, #ff4b2b);
+        padding: 4px 12px;
+        font-size: 12px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+
+    .package-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    .package-desc {
+        font-size: 13px;
+        opacity: 0.85;
+        margin-bottom: 12px;
+    }
+
+    .package-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .price {
+        font-size: 18px;
+        font-weight: bold;
+        color: #5dff9f;
+        white-space: nowrap;
+    }
+
+    .buy-btn {
+        flex: 1;
+        text-align: center;
+        padding: 12px;
+        border-radius: 30px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        color: #fff;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="section-title">📦 Package Section</div>
+
+    <!-- APK Download Section -->
+    <div class="apk-download">
+        <h3>📲 Download Our App (APK)</h3>
+        <a class="apk-btn" href="YOUR_APK_LINK.apk" download>
+            ⬇ Download APK
+        </a>
+    </div>
+
+    <div class="package-card">
+        <div class="hot-badge">🔥 HOT</div>
+        <div class="package-title">Myanmar All Sim Wifi – 75GB</div>
+        <div class="package-desc">1 Month • Unlimited Device</div>
+        <div class="package-footer">
+            <div class="price">3000 Baht</div>
+            <a class="buy-btn" href="https://m.me/YOUR_PAGE_USERNAME" target="_blank">💬 Buy Now</a>
+        </div>
+    </div>
+
+    <div class="package-card">
+        <div class="hot-badge">🔥 HOT</div>
+        <div class="package-title">Myanmar All Sim Wifi – 100GB</div>
+        <div class="package-desc">1 Month • Unlimited Device</div>
+        <div class="package-footer">
+            <div class="price">4000 Ks</div>
+            <a class="buy-btn" href="https://m.me/YOUR_PAGE_USERNAME" target="_blank">💬 Buy Now</a>
+        </div>
+    </div>
+
+    <div class="package-card">
+        <div class="hot-badge">🔥 HOT</div>
+        <div class="package-title">Myanmar All Sim Wifi – 150GB</div>
+        <div class="package-desc">1 Month • Unlimited Device</div>
+        <div class="package-footer">
+            <div class="price">5000 Ks</div>
+            <a class="buy-btn" href="https://m.me/YOUR_PAGE_USERNAME" target="_blank">💬 Buy Now</a>
+        </div>
+    </div>
+
+    <div class="package-card">
+        <div class="hot-badge">🔥 HOT</div>
+        <div class="package-title">Myanmar All Sim Wifi – 1 Month</div>
+        <div class="package-desc">1 Device Only</div>
+        <div class="package-footer">
+            <div class="price">6000 Ks</div>
+            <a class="buy-btn" href="https://m.me/YOUR_PAGE_USERNAME" target="_blank">💬 Buy Now</a>
+        </div>
+    </div>
+
+    <div class="package-card">
+        <div class="hot-badge">🔥 HOT</div>
+        <div class="package-title">Thailand VPN – 1 Month</div>
+        <div class="package-desc">1 Device Only</div>
+        <div class="package-footer">
+            <div class="price">50 Baht</div>
+            <a class="buy-btn" href="https://m.me/YOUR_PAGE_USERNAME" target="_blank">💬 Buy Now</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
