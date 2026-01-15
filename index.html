@@ -5,216 +5,216 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Packag</title>
 
-<!-- ✅ Font Awesome Icons -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #fff;
-        background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000);
-        background-size: 400% 400%;
-        animation: bgMove 12s ease infinite;
-        padding-top: 90px;
-    }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #000);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    padding-top: 90px;
+}
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-    @keyframes bgMove {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
+/* ===== Header ===== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10,10,30,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.header-inner {
+    max-width: 420px;
+    margin: auto;
+    padding: 12px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-logo img {
+    width: 50px;
+    filter: drop-shadow(0 0 15px rgba(0,198,255,0.6));
+    animation: logoFloat 3s ease-in-out infinite, logoGlow 2.5s ease-in-out infinite;
+}
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+@keyframes logoFloat {
+    50% { transform: translateY(-8px); }
+}
+@keyframes logoGlow {
+    50% { filter: drop-shadow(0 0 25px rgba(0,198,255,0.9)); }
+}
 
-    .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background: rgba(10,10,30,0.85);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+/* Social */
+.social-icons a {
+    color: #fff;
+    font-size: 22px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+.social-icons a.facebook:hover {
+    color: #1877f2;
+    text-shadow: 0 0 10px #1877f2;
+}
+.social-icons a.telegram:hover {
+    color: #29b6f6;
+    text-shadow: 0 0 10px #29b6f6;
+}
 
-    .header-inner {
-        max-width: 420px;
-        margin: auto;
-        padding: 12px 14px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-    }
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 10px;
+}
 
-    .header-left {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-    }
+/* ===== BEAUTIFUL APK DOWNLOAD ===== */
+.apk-download {
+    position: relative;
+    padding: 24px 18px;
+    margin-bottom: 26px;
+    border-radius: 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 0 40px rgba(0,198,255,0.35);
+    overflow: hidden;
+}
+.apk-download::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(90deg, #00c6ff, #7f5cff, #00c6ff);
+    z-index: -1;
+    filter: blur(25px);
+    animation: glowMove 6s linear infinite;
+}
+@keyframes glowMove {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(50%); }
+}
+.apk-download h3 {
+    margin: 0 0 14px;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+.apk-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 30px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0 0 20px rgba(255,152,0,0.6);
+    transition: 0.3s;
+}
+.apk-btn i {
+    font-size: 18px;
+}
+.apk-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 35px rgba(255,87,34,0.9);
+}
 
-    .header-logo img {
-        width: 50px;
-        filter: drop-shadow(0 0 15px rgba(0,198,255,0.6));
-        animation: logoFloat 3s ease-in-out infinite,
-                   logoGlow 2.5s ease-in-out infinite;
-    }
-
-    .header-title {
-        font-size: 20px;
-        font-weight: bold;
-        white-space: nowrap;
-    }
-
-    @keyframes logoFloat {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-8px); }
-        100% { transform: translateY(0); }
-    }
-
-    @keyframes logoGlow {
-        0% { filter: drop-shadow(0 0 10px rgba(0,198,255,0.4)); }
-        50% { filter: drop-shadow(0 0 25px rgba(0,198,255,0.9)); }
-        100% { filter: drop-shadow(0 0 10px rgba(0,198,255,0.4)); }
-    }
-
-    /* ✅ Social Icons */
-    .social-icons a {
-        color: #fff;
-        font-size: 22px;
-        margin-left: 10px;
-        transition: 0.3s;
-    }
-
-    .social-icons a.facebook:hover {
-        color: #1877f2;
-        text-shadow: 0 0 10px #1877f2;
-    }
-
-    .social-icons a.telegram:hover {
-        color: #29b6f6;
-        text-shadow: 0 0 10px #29b6f6;
-    }
-
-    .container {
-        max-width: 420px;
-        margin: auto;
-        padding: 10px;
-    }
-
-    @media (min-width: 768px) {
-        .header-inner {
-            max-width: 700px;
-        }
-        .container {
-            max-width: 700px;
-        }
-        .header-title {
-            font-size: 22px;
-        }
-    }
-
-    .apk-download {
-        background: linear-gradient(90deg, #00c6ff, #0072ff);
-        border-radius: 18px;
-        padding: 18px;
-        text-align: center;
-        margin-bottom: 22px;
-        box-shadow: 0 0 25px rgba(0,198,255,0.6);
-    }
-
-    .apk-btn {
-        display: inline-block;
-        padding: 14px 26px;
-        border-radius: 30px;
-        background: linear-gradient(90deg, #ff9800, #ff5722);
-        color: #fff;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .package-card {
-        position: relative;
-        background: linear-gradient(180deg, rgba(40,40,80,0.9), rgba(15,15,40,0.9));
-        border: 2px solid #6a7cff;
-        border-radius: 16px;
-        padding: 16px;
-        margin-bottom: 18px;
-        box-shadow: 0 0 20px rgba(106,124,255,0.25);
-        transition: 0.3s;
-    }
-
-    .package-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 0 35px rgba(106,124,255,0.6);
-    }
-
-    .hot-badge {
-        position: absolute;
-        top: -12px;
-        right: -8px;
-        background: linear-gradient(90deg, #ff416c, #ff4b2b);
-        padding: 4px 12px;
-        font-size: 12px;
-        border-radius: 20px;
-        font-weight: bold;
-    }
-
-    .package-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .price {
-        font-size: 18px;
-        color: #5dff9f;
-        font-weight: bold;
-    }
-
-    .buy-btn {
-        padding: 12px 20px;
-        border-radius: 30px;
-        background: linear-gradient(90deg, #667eea, #764ba2);
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
-    }
+/* ===== Packages ===== */
+.package-card {
+    position: relative;
+    background: linear-gradient(180deg, rgba(40,40,80,0.9), rgba(15,15,40,0.9));
+    border: 2px solid #6a7cff;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 18px;
+    box-shadow: 0 0 20px rgba(106,124,255,0.25);
+    transition: 0.3s;
+}
+.package-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(106,124,255,0.6);
+}
+.hot-badge {
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.package-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    font-size: 18px;
+    color: #5dff9f;
+    font-weight: bold;
+}
+.buy-btn {
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
 </style>
 </head>
 
 <body>
 
-<!-- ===== Fixed Header ===== -->
 <div class="header">
-    <div class="header-inner">
-        <div class="header-left">
-            <div class="header-logo">
-                <img src="https://raw.githubusercontent.com/yawlawt/YTPlusVip/main/images/icon.png">
-            </div>
-            <div class="header-title"> Yaw Lawt</div>
-        </div>
-
-        <!-- ✅ Social Icons -->
-        <div class="social-icons">
-            <a class="facebook" href="https://www.facebook.com/yawlawt2431" target="_blank">
-                <i class="fab fa-facebook"></i>
-            </a>
-            <a class="telegram" href="https://t.me/aungaung78" target="_blank">
-                <i class="fab fa-telegram"></i>
-            </a>
-        </div>
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="header-logo">
+        <img src="https://raw.githubusercontent.com/yawlawt/YTPlusVip/main/images/icon.png">
+      </div>
+      <div class="header-title">Yaw Lawt</div>
     </div>
+    <div class="social-icons">
+      <a class="facebook" href="https://www.facebook.com/yawlawt2431" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a class="telegram" href="https://t.me/aungaung78" target="_blank">
+        <i class="fab fa-telegram"></i>
+      </a>
+    </div>
+  </div>
 </div>
 
 <div class="container">
 
-    <div class="apk-download">
-        <h3>YT Plus APK</h3>
-        <a class="apk-btn" href="https://github.com/yawlawt2000/Package-Section-/releases/download/V1.0.1/YT_PLUS_VPNcom.yt.plusv2.0.apk" download>
-            Download APK
-        </a>
-    </div>
+  <!-- BEAUTIFUL APK DOWNLOAD -->
+  <div class="apk-download">
+    <h3>🚀 YT Plus APK</h3>
+    <a class="apk-btn" href="https://github.com/yawlawt2000/Package-Section-/releases/download/V1.0.1/YT_PLUS_VPNcom.yt.plusv2.0.apk" download>
+      <i class="fas fa-download"></i> Download APK
+    </a>
+  </div>
 
     <div class="package-card">
         <div class="hot-badge">🔥 HOT</div>
